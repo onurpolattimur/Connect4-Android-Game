@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#cb235c</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="transparan">#00ffffff</color>
+    <color name="colorDarkA">#64000000</color>
+    <color name="launcHeader">#3F51B5</color>
+    <color name="launcText">#636676</color>
+    <color name="buttonColor">#ca075e4b</color>
+</resources>

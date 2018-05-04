@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/repeat_bg"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fun"
+        android:text="ConnectFour"
+        android:textColor="@color/launcHeader"
+        android:textSize="36sp"
+        android:layout_marginBottom="20dp"/>
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rgroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/launch_screen"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="204dp"
+        android:layout_gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="15dp">
+            <TextView
+                android:id="@+id/sizeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="monospace"
+                android:text="Board Size: 5"
+                android:textSize="18sp"
+                />
+
+            <SeekBar
+                android:id="@+id/sizeBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:max="40"
+                android:min="5"
+                android:progress="5"
+
+
+                />
+            <RadioButton
+                android:id="@+id/pvp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/launcText"
+                android:checked="true"
+                android:fontFamily="sans-serif-condensed"
+                android:onClick="radioClick"
+                android:text="PLAYER VS PLAYER"
+                android:textColor="@android:color/tertiary_text_light"
+                android:textSize="18dp"
+
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/pvc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/launcText"
+                android:fontFamily="sans-serif-condensed"
+                android:onClick="radioClick"
+                android:text="PLAYER VS COMPUTER"
+                android:textColor="@android:color/tertiary_text_light"
+                android:textSize="18dp"
+
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/fun"
+                    android:text="Time"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="25sp" />
+                <Switch
+                    android:id="@+id/timeSwitch"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff="OFF"
+                    android:textOn="ON"
+
+                    />
+            </LinearLayout>
+
+
+            <SeekBar
+                android:id="@+id/timeBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:max="200"
+                android:progress="10"
+                android:visibility="gone"
+
+                />
+
+            <TextView
+                android:id="@+id/timeSecond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="monospace"
+                android:text="10 sec"
+                android:textSize="18sp"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:background="@color/launcHeader"
+        android:textColor="@color/colorWhite"
+        android:onClick="startClick"/>
+
+
+</LinearLayout>
+

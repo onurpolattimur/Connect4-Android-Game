@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_header"
+        android:columnCount="5"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <ImageView
+            android:id="@+id/headerTurn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            app:srcCompat="@drawable/turn1" />
+
+        <TextView
+            android:id="@+id/textTurn1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/ds_digi"
+            android:text="0"
+            android:textColor="@color/colorWhite"
+            android:textSize="45dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:adjustViewBounds="true"
+                android:maxHeight="35dp"
+                app:srcCompat="@drawable/timeicon" />
+
+            <TextView
+                android:id="@+id/timeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+
+                android:fontFamily="@font/ds_digi"
+                android:gravity="center_horizontal"
+                android:pointerIcon="arrow"
+                android:text="∞"
+                android:textColor="@color/colorWhite"
+                android:textSize="30dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textTurn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/ds_digi"
+            android:text="0"
+            android:textColor="@color/colorWhite"
+            android:textSize="45dp" />
+
+        <ImageView
+            android:id="@+id/headerTurn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/turn2" />
+
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <GridLayout
+                    android:id="@+id/cellGrid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corner"
+                    android:columnCount="7"
+                    android:padding="10dp"
+                    android:rowCount="6">
+
+
+                </GridLayout>
+            </HorizontalScrollView>
+        </ScrollView>
+    </LinearLayout>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:background="@color/colorDarkA"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <ImageView
+
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:adjustViewBounds="true"
+            android:onClick="pauseClick"
+            android:src="@drawable/pause" />
+
+        <LinearLayout
+            android:id="@+id/wait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cpu"
+                android:adjustViewBounds="true"
+                android:padding="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="I am thinking..\nWait please."
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/undo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="5dp"
+            android:adjustViewBounds="true"
+            android:onClick="undoClick"
+            android:src="@drawable/undo"
+
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
