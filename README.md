@@ -44,3 +44,5 @@ After pressing Start button the screen that you will face is shown below.
 </p>
 
 
+
+ > **Note:** You can download the application, it is provided as c44.apk
